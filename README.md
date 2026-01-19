@@ -25,12 +25,13 @@ Rocky Linux uses SELinux: It relies on security labels for files and processes. 
 
 ## VirtualBox, UTM, Virt-Manager
 
-| Característica | Oracle VirtualBox | UTM (Apple Silicon / macOS) | virt-manager (KVM/QEMU) |
+| Feature | Oracle VirtualBox | UTM (Apple Silicon / macOS) | virt-manager (KVM/QEMU) |
 | :--- | :--- | :--- | :--- |
-| **Motor (Backend)** | Hipervisor propio de Oracle | QEMU / Apple Virtualization | **KVM (Kernel-based VM)** |
-| **Rendimiento** | Bueno en x86, pero pesado | Excelente en Mac M1/M2/M3 | **Nativo en Linux (máxima velocidad)** |
-| **Arquitectura** | Principalmente x86_64 | Emula múltiples arquitecturas | Muy flexible (x86, ARM, etc.) |
-| **Uso en 42** | El estándar histórico | La solución para Macs nuevos | La solución profesional en Linux |
+| **Backend Motor** | Oracle's own hypervisor | QEMU / Apple Virtualization | **KVM (Kernel-based VM)** |
+| **Performance** | Good on x86, but resource-heavy | Excellent on Mac M1/M2/M3 | **Native on Linux (maximum speed)** |
+| **Architecture** | Primarily x86_64 | Emulates multiple architectures | Highly flexible (x86, ARM, etc.) |
+| **Use at 42** | Historical standard | Standard for newer Mac Silicon | Professional solution for Linux hosts |
+
 
 ### Pros and Cons:
 **Debian:** 
