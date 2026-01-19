@@ -23,7 +23,7 @@ This is the most important differences beetwen Rocky and Debian:
 Debian uses AppArmor: It's based on file paths. It's simpler to configure but less granular.
 Rocky Linux uses SELinux: It relies on security labels for files and processes. It's much more powerful and difficult to configure, it's the gold standard in enterprise security.
 
-## VirtualBox, UTM, Virt-Manager
+### VirtualBox, UTM, Virt-Manager
 
 | Feature | Oracle VirtualBox | UTM (Apple Silicon / macOS) | virt-manager (KVM/QEMU) |
 | :--- | :--- | :--- | :--- |
