@@ -12,18 +12,18 @@ SELinux Management: Unlike Debian, Rocky uses SELinux by default. The system is 
 
 Systemd Monitoring: Instead of cron, a Systemd Timer is used to run the monitoring.sh script every 10 minutes. This allows for better integration with journalctl logs.
 
-## Debian vs Rocky
+# Debian vs Rocky
 
-### Philosophy
+## Philosophy
 
 I chose Rocky because I rather to learn about OS focus on bussiness, Debian is commonly used for personal purposes.
 
-### Package management
+## Package management
 **Debian:** Uses the .deb format and the apt package manager. It is known for having one of the largest and easiest-to-use repositories.
 
 **Rocky Linux:** Uses the .rpm format and the **dnf** package manager (successor to yum). It is designed for server environments where package traceability and security are critical.
 
-### **Security**
+# **Security**
 
 This is the most important differences beetwen Rocky and Debian:
 Both use *MAC - Mandatory Access  Control*
@@ -73,7 +73,7 @@ Technical summary of the differences between the two most widely used Mandatory 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-### **VirtualBox, UTM, Virt-Manager**
+# **VirtualBox, UTM, Virt-Manager**
 
 | Feature | Oracle VirtualBox | UTM (Apple Silicon / macOS) | virt-manager (KVM/QEMU) |
 | :--- | :--- | :--- | :--- |
@@ -82,14 +82,14 @@ Technical summary of the differences between the two most widely used Mandatory 
 | **Architecture** | Primarily x86_64 | Emulates multiple architectures | Highly flexible (x86, ARM, etc.) |
 | **Use at 42** | Historical standard | Standard for newer Mac Silicon | Professional solution for Linux hosts |
 
-### **UFW vs Firewalld**
+# **UFW vs Firewalld**
 
 + UFW is simpler and more straightforward (Ubuntu/Debian) like this name says "uncomplicated firewall", ideal for users seeking ease of use.
 + Firewalld is more powerful and flexible with its zone system, perfect for enterprise environments that require more detailed and dynamic management (RHEL/Fedora/openSUSE).
 The choice depends on complexity: UFW for speed and simplicity, firewalld for granular control and complex environments
 
 
-### **Pros and Cons**
+# **Pros and Cons**
 **Debian:** 
 + Lightweight, highly compatible, great community, easy to set up.
 + Sometimes it has very old software versions in its "Stable" branch.
