@@ -37,6 +37,7 @@ Rocky Linux uses SELinux: It relies on security labels for files and processes. 
 **Debian:** 
 + Lightweight, highly compatible, great community, easy to set up.
 + Sometimes it has very old software versions in its "Stable" branch.
+
 **Rocky Linux:**
 + Business stability (10 years of support), extreme security (SELinux), ideal for production.
 + High learning curve, stricter network configuration and security, hardware requirements (x86-64-v3).
