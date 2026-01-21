@@ -1,6 +1,6 @@
 *This project has been created as part of the **42 curriculum by cfrancis***
 
-# *Description*
+# **Description**
 This project is about System Administration, touching the most importants points for a begginer, like configuration, strict security rules,
 managing partitions using encrypted LVM, and setting up web services (WordPress) and file transfer services (vsftpd).
 
@@ -23,7 +23,7 @@ I chose Rocky because I rather to learn about OS focus on bussiness, Debian is c
 
 **Rocky Linux:** Uses the .rpm format and the **dnf** package manager (successor to yum). It is designed for server environments where package traceability and security are critical.
 
-### Security 
+### **Security**
 
 This is the most important differences beetwen Rocky and Debian:
 Both use *MAC - Mandatory Access  Control*
@@ -70,8 +70,10 @@ Technical summary of the differences between the two most widely used Mandatory 
 | **Default Distros** | Ubuntu, Debian, openSUSE, SUSE Linux. | RHEL, Fedora, Rocky Linux, Android. |
 | **Learning Curve** | Fast (Ideal for small/medium teams). | Steep (Requires specialized administration). |
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
-### VirtualBox, UTM, Virt-Manager
+
+### **VirtualBox, UTM, Virt-Manager**
 
 | Feature | Oracle VirtualBox | UTM (Apple Silicon / macOS) | virt-manager (KVM/QEMU) |
 | :--- | :--- | :--- | :--- |
@@ -80,14 +82,14 @@ Technical summary of the differences between the two most widely used Mandatory 
 | **Architecture** | Primarily x86_64 | Emulates multiple architectures | Highly flexible (x86, ARM, etc.) |
 | **Use at 42** | Historical standard | Standard for newer Mac Silicon | Professional solution for Linux hosts |
 
-### UFW vs Firewalld
+### **UFW vs Firewalld**
 
 + UFW is simpler and more straightforward (Ubuntu/Debian) like this name says "uncomplicated firewall", ideal for users seeking ease of use.
 + Firewalld is more powerful and flexible with its zone system, perfect for enterprise environments that require more detailed and dynamic management (RHEL/Fedora/openSUSE).
 The choice depends on complexity: UFW for speed and simplicity, firewalld for granular control and complex environments
 
 
-### Pros and Cons:
+### **Pros and Cons**
 **Debian:** 
 + Lightweight, highly compatible, great community, easy to set up.
 + Sometimes it has very old software versions in its "Stable" branch.
@@ -97,13 +99,13 @@ The choice depends on complexity: UFW for speed and simplicity, firewalld for gr
 + High learning curve, stricter network configuration and security, hardware requirements (x86-64-v3).
 
  
-# *Instructions*
+# **Instructions**
 1. Signature: With the VM powered off, generate the SHA1 hash of the .qcow2 file: sha1sum <file>.qcow2.
 2. SSH Connection: ssh cfrancis42@l27.0.0.1 -p 4242
 3. Monitoring: The monitoring.sh script runs every 10 minutes via Systemd Timer. To stop it: sudo systemctl stop monitoring.timer or Ctrl+C
 4. vsftpd connection: ftp -p 127.0.0.1 2121
 
-# Resources:
+# **Resources**
 + *OS*: [link](https://docs.rockylinux.org/10/es/guides/)
 + *Management*: [link](https://docs.rockylinux.org/10/es/books/admin_guide/06-users/)
 + *How to write a READme.md:* [link](https://commonmark.org/help/)
