@@ -130,3 +130,4 @@ Siga estos pasos estrictamente:
   1. Explanation of how to create bridges (30000 to 30002) so that the vsftpd service would work.
   2. WordPress password recovery
   3. Localhost:8080 problems connections debuggin
+  4. monitorin.sh set up
