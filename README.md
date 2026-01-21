@@ -100,10 +100,27 @@ The choice depends on complexity: UFW for speed and simplicity, firewalld for gr
 
  
 # **Instructions**
-1. Signature: With the VM powered off, generate the SHA1 hash of the .qcow2 file: sha1sum <file>.qcow2.
-2. SSH Connection: ssh cfrancis42@l27.0.0.1 -p 4242
-3. Monitoring: The monitoring.sh script runs every 10 minutes via Systemd Timer. To stop it: sudo systemctl stop monitoring.timer or Ctrl+C
-4. vsftpd connection: ftp -p 127.0.0.1 2121
+For the importance of the next steps I prefer to write the instructions in spanish:
+*Debido a que Rocky Linux 10 requiere la microarquitectura x86-64-v3, VirtualBox daba errores de ejecución (Kernel Panic) en este hardware. 
+He utilizado virt-manager, que es la interfaz profesional para KVM/QEMU en Linux, permitiendo una virtualización nativa mucho más estable y eficiente para este proyecto.*
+Siga estos pasos estrictamente:
+1. Localice el archivo /home/cfrancis/sgoinfre/born2beroot_delivery el nombre del archivo es "cfrancis42.qcow2"
+2. Verifique la firma
+3. Para evitar que las pruebas de la evaluación (cambios de contraseña, hostname, etc.) modifiquen el hash del disco original, crearemos un clon:
+4. Abra Virtual Machine Manager (virt-manager).
+   + Haga clic derecho sobre la máquina virtual cfrancis42.
+   + Seleccione la opción Clone.
+   + En la ventana emergente, verifique que el nombre del nuevo disco sea diferente (ej. cfrancis42-clone.qcow2).
+   + Pulse el botón Clone. virt-manager copiará el archivo de disco automáticamente.
+5. Configuración de Seguridad para el Clon:
+   + Antes de encender el clon, asegúrese de que mantiene la compatibilidad de CPU:
+   + Abra los detalles de la máquina clonada.
+   + En la sección CPUs, asegúrese de que el modelo esté en host-passthrough (necesario para las instrucciones AVX2 de Rocky 10).
+   + En la sección NIC (Red), verifique que el reenvío de puertos (Port Forwarding) esté activo para los puertos 4242 (SSH) y 8080 (HTTP).
+    
+5. SSH Connection: ssh cfrancis42@l27.0.0.1 -p 4242
+6. Monitoring: The monitoring.sh script runs every 10 minutes via Systemd Timer. To exit press Ctrl+C
+7. vsftpd connection: ftp -p 127.0.0.1 2121
 
 # **Resources**
 + *OS*: [link](https://docs.rockylinux.org/10/es/guides/)
